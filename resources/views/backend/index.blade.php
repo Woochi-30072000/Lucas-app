@@ -1,6 +1,5 @@
-@extends('backend.master')
-
-
+@extends('backend.component.master')
+@section('title') Admin Dashboard @stop
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
