@@ -1,20 +1,18 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        $db = Category::orderBy('id','DESC')->paginate();
-
-        return view('backend.category.index',compact('db'));
+        //
     }
 
     /**
@@ -36,7 +34,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(Product $product)
     {
         //
     }
@@ -44,7 +42,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Product $product)
     {
         //
     }
@@ -52,7 +50,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Product $product)
     {
         //
     }
@@ -60,7 +58,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Product $product)
     {
         //
     }

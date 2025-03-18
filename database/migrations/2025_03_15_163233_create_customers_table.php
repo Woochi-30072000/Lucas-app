@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email',100)->unique();
             $table->string('phone',100)->unique();
             $table->string('address',200)->nullable(); 
-            $table->dateTime('birthday')->nullable();
+            $table->date('birthday')->nullable();
             $table->text('description')->nullable();
             $table->text('customer_agent')->nullable();
             $table->tinyInteger('gender')->nullable()->default(1);

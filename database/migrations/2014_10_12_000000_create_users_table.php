@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name',50);
             $table->string('phone',20)->nullable();
             $table->string('address',200)->nullable();
-            $table->dateTime('birthday')->nullable();
+            $table->date('birthday')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->text('user_agent')->nullable();

@@ -20,9 +20,13 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::group(['prefix' => 'category'], function(){
         Route::get('/', [CategoryController::class, 'index'])->name('category.index');
+        Route::post('/', [CategoryController::class, 'index']);
+
+
+
     }); 
 
-        
+
 });
 
 
