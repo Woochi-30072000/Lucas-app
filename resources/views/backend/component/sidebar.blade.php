@@ -44,6 +44,16 @@
                 </ul>
             </li>
 
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-table"></i> <span>Product Managers</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('product.index') }}"><i class="fa fa-edit"></i> Product List </a></li>
+                    <li><a href="pages/forms/advanced.html"><i class="fa fa-edit"></i> Category Edit</a></li>
+                </ul>
+            </li>
 
             <li class="treeview">
                 <a href="#">

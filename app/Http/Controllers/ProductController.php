@@ -12,7 +12,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $db = Product::orderBy('id','DESC')->paginate(5);
+
+        return view('backend.product.index',compact('db'));
     }
 
     /**

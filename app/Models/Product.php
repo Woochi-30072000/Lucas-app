@@ -17,4 +17,8 @@ class Product extends Model
         'category_id',
         'description',
     ];
+
+    public function catid() {
+        return $this->hasOne(Category::class, 'id' ,'category_id');
+    }
 }

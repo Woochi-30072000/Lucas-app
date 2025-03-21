@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('description',500)->nullable();
             $table->tinyInteger('status')->nullable()->default();
             $table->timestamps();
-            
             $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
         });

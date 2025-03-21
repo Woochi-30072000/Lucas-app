@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function index()
     {
 
-        $db = Category::orderBy('id','DESC')->paginate();
+        $db = Category::orderBy('id','DESC')->paginate(5);
 
         return view('backend.category.index',compact('db'));
     }
@@ -22,7 +22,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.category.create');
+        
     }
 
     /**

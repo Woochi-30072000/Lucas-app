@@ -31,19 +31,19 @@
 
                                     <div class="input-group-btn">
                                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                        <a href="" class="btn btn-primary"><i class="fa fa-plus-square"></i></a>
+                                        <a href="{{ route('category.create')}}" class="btn btn-primary"><i class="fa fa-plus-square"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- /.box-header -->
-
                         <div class="box-body">
                             <table class="table table-striped ">
                                 <tr>
                                     <th class="text-center" style="width: 3%">Id</th>
                                     <th style="width: 47%">Name</th>
-                                    <th style="width: 20%">Status</th>
+                                    <th style="width: 10%">Ngày tạo</th>
+                                    <th style="width: 10%">Status</th>
                                     {{-- <th style="width: 20%">Progress</th> --}}
                                     <th style="width: 10%" class="text-center">Action</th>
                                 </tr>
@@ -52,6 +52,8 @@
                                         <td class="text-center">{{$item->id}}</td>
                                         <td>{{$item->name}}</td>
                                         {{-- <td>{{$item->status}}</td> --}}
+                                        <td>{{$item->created_at->format('d/m/Y')}}</td>
+                                        
                                         <td>{{$item->status == 0 ? 'Đang ẩn' : 'Hiển thị' }}</td>
 
                                         <td class="text-center">
@@ -62,19 +64,19 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
-
                             </table>
                         </div>
-
+                        
 
                         <div class="box-footer clearfix">
                             <ul class="pagination pagination-sm no-margin pull-right">
-                                <li><a href="#">&laquo;</a></li>
+                                {{$db->links()}}
+                                {{-- <li><a href="#">&laquo;</a></li>
                                 <li><a href="#">1</a></li>
                                 <li><a href="#">2</a></li>
                                 <li><a href="#">3</a></li>
-                                <li><a href="#">&raquo;</a></li>
+                                <li><a href="#">&raquo;</a></li> --}}
+                                
                             </ul>
                         </div>
                     </div>
@@ -84,4 +86,5 @@
         </section>
         <!-- /.content -->
     </div>
+
 @endsection
